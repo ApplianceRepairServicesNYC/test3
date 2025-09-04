@@ -1,1 +1,64 @@
 
+```html
+<div class="faq-container">
+    <div class="schedule-text">Schedule Your Repair Online</div>
+    <button class="book-button" id="bookButton" aria-expanded="false" aria-controls="contactFormSection">Book Online</button>
+    <button id="justCall" type="button" aria-label="Tap to call" class="call-button">Call Now</button>
+    <span id="callSlot" aria-live="polite" class="call-slot"></span>
+    <div class="contact-form-section" id="contactFormSection">
+        <p class="expect-text">What to Expect: Once you submit your request, a representative will contact you within 30 minutes to discuss available dates, service details, and associated charges before confirming your appointment.</p>
+        <form id="contactForm" class="contact-form" title="Contact Form for Appliance Repair Scheduling" novalidate>
+            <div class="form-group">
+                <label for="name">Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required aria-describedby="nameError" aria-required="true">
+                <span id="nameError" class="error-message">Please enter your name.</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required aria-describedby="emailError" aria-required="true">
+                <span id="emailError" class="error-message">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone <span aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required pattern="[0-9]{10}" aria-describedby="phoneError" aria-required="true">
+                <span id="phoneError" class="error-message">Please enter a valid 10-digit phone number.</span>
+            </div>
+            <div class="form-group">
+                <label for="address">Address <span aria-hidden="true">*</span></label>
+                <textarea id="address" name="address" placeholder="Your Address" required aria-describedby="addressError" aria-required="true"></textarea>
+                <span id="addressError" class="error-message">Please enter your address.</span>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject <span aria-hidden="true">*</span></label>
+                <select id="subject" name="subject" required aria-describedby="subjectError" aria-required="true">
+                    <option value="">Select a Subject</option>
+                    <option value="refrigerator_repair">Refrigerator Repair</option>
+                    <option value="oven_repair">Oven Repair</option>
+                    <option value="dishwasher_repair">Dishwasher Repair</option>
+                    <option value="washing_machine_repair">Washing Machine Repair</option>
+                    <option value="cooktop_repair">Cooktop Repair</option>
+                    <option value="dryer_repair">Dryer Repair</option>
+                    <option value="microwave_repair">Microwave Repair</option>
+                    <option value="hood_vent_repair">Hood Vent Repair</option>
+                    <option value="wine_cooler_repair">Wine Cooler Repair</option>
+                    <option value="diagnostic_maintenance">Diagnostic & Maintenance</option>
+                    <option value="installation">Installation</option>
+                    <option value="other">Other</option>
+                </select>
+                <span id="subjectError" class="error-message">Please select a subject.</span>
+            </div>
+            <div class="form-group">
+                <label for="message">Message <span aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" placeholder="Please describe the issue you're experiencing with your appliance & any relevant information we may need to know" required aria-describedby="messageError" aria-required="true"></textarea>
+                <span id="messageError" class="error-message">Please enter your message.</span>
+            </div>
+            <button type="submit" class="form-button" aria-label="Submit contact form">Send Message</button>
+        </form>
+    </div>
+</div>
+<div class="modal-overlay" id="modalOverlay"></div>
+<div class="modal" id="successModal" role="dialog" aria-labelledby="modalMessage" aria-hidden="true">
+    <p id="modalMessage">Your email has been sent. A representative will contact you within 30 minutes to schedule your appliance repair!</p>
+    <button class="close-button" id="closeModal" aria-label="Close notification">Close</button>
+</div>
+```
